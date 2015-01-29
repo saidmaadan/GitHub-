@@ -8,10 +8,16 @@
  * Controller of the ghubApp
  */
 angular.module('ghubApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('RepoController', function($scope,github, $routeParams){
+		
+		var onRepo = function(data){
+			$scope.repo = data;
+		};
+
+		var on 
+		var reponame = $routeParams.reponame;
+		var username = $routeParams.username;
+
+		github.getRepoDetails(username, reponame)
+				.then(onRepo, onError);
+	});
