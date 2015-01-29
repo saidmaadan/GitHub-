@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainController', function () {
+describe('Controller: RepoController', function () {
 
   // load the controller's module
   beforeEach(module('ghubApp'));
 
-  var MainController,
+  var RepoController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainController = $controller('MainController', {
+    RepoController = $controller('RepoController', {
       $scope: scope
     });
   }));
